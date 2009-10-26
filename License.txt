@@ -1,0 +1,14 @@
+FM SOFT IW Tiny Component pack version 1.0.0
+================================================
+
+-These components are provided 'as-is', without warranty of any kind, expressed or implied. 
+In no event will the author be held liable for any damages arising from the use of this software.
+
+-Distribution and modifications are allowed as long as the credits to the original author are preserved and explicitly stated.
+
+-These Components are free to use for personal or commercial purpose as long as they are not included or distributed as a part of another development tool library. Contact the author if you want to distribute them as a part of another IW related library.
+
+Developed by:                                              
+Farshad Mohajeri
+FM SOFT CO. LTD. (c) 2009
+Contact: farshad@fmsoft.net
