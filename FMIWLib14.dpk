@@ -37,8 +37,7 @@ requires
   designide,
   xmlrtl,
   vclactnband,
-  vcljpg,
-  Intraweb_90_100;
+  Intraweb_100_140;
 
 contains
   FMTabControl in 'FMTabControl.pas',
