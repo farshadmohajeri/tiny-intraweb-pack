@@ -77,7 +77,7 @@ type
     property FixedCols: Integer read FFixedCols write SetFixedCols;
     property FixedRows: Integer read FFixedRows write SetFixedRows;
     property RowCount:Integer read GetRowCount write SetRowCount;
-    property ColCount:Integer read GetColCount write SetColCount;
+    property ColumnCount:Integer read GetColCount write SetColCount;
     property Color:TColor read GetColor write SetColor;
     property DefaultColWidth:Integer read fDefaultColWidth write SetDefaultColWidth;
     property DefaultRowHeight:Integer read fDefaultRowHeight write SetDefaultRowHeight;
@@ -98,7 +98,7 @@ uses
 constructor TIWFMStringGrid.Create(AOwner:TComponent);
 begin
   inherited;
-  ColCount:=3;
+  ColumnCount:=3;
   RowCount:=3;
   FixedRows:=1;
   FixedCols:=1;
@@ -132,7 +132,7 @@ var
 begin
   FCellsClickable:=Value;
   for I := 0 to RowCount- 1 do
-    for J := 0 to ColCount- 1 do
+    for J := 0 to ColumnCount- 1 do
       if (J>=FFixedCols) then
         Cell[I, J].Clickable:=FCellsClickable;
 end;
@@ -169,7 +169,7 @@ procedure TIWFMStringGrid.SetRowHeights(Index: Longint; Value: Integer);
 var
   I : Integer;
 begin
-  for I := 0 to ColCount - 1 do
+  for I := 0 to ColumnCount - 1 do
     Cell[Index, I].Height:=IntToStr(Value);
 end;
 
@@ -206,7 +206,7 @@ var
   I,J : Integer;
 begin
   for I := 0 to RowCount- 1 do
-    for J := 0 to ColCount- 1 do
+    for J := 0 to ColumnCount- 1 do
       Cell[I, J].Font:=Font;
 end;
 
@@ -215,7 +215,7 @@ var
   I,J : Integer;
 begin
   for I := sRow to RowCount- 1 do
-    for J := sCol to ColCount- 1 do
+    for J := sCol to ColumnCount- 1 do
     begin
       if sRow=0 then
         Cell[I, J].Width:=IntToStr(fDefaultColWidth)
@@ -249,7 +249,7 @@ begin
   if SelectedLine>=RowCount then SelectedLine:=-1;
 
   for I := 0 to RowCount- 1 do
-    for J := 0 to ColCount- 1 do
+    for J := 0 to ColumnCount- 1 do
       if (I<fFixedRows) or (J<fFixedCols) then
         Cell[I, J].BGColor:=fFixedColor
       else if (I=SelectedLine) and (I>=fFixedRows) then
@@ -278,7 +278,7 @@ end;
 procedure TIWFMStringGrid.SetFixedCols(Value:Integer);
 begin
   fFixedCols:=Value;
-  if fFixedCols>ColCount then fFixedCols:=ColCount;
+  if fFixedCols>ColumnCount then fFixedCols:=ColumnCount;
 end;
 
 function TIWFMStringGrid.GetRowCount:Integer;
@@ -297,7 +297,7 @@ end;
 
 function TIWFMStringGrid.GetColCount:Integer;
 begin
-  Result:=ColumnCount;
+  Result:=inherited ColumnCount;
 end;
 
 procedure TIWFMStringGrid.SetColCount(Value:Integer);
@@ -305,7 +305,7 @@ var
   pCol  : Integer;
 begin
   pCol:=ColumnCount;
-  ColumnCount:=Value;
+  inherited ColumnCount:=Value;
   SetCellSizes(0, pCol);
 end;
 

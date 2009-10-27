@@ -109,6 +109,7 @@
 			<DCCReference Include="FMComboBox.pas"/>
 			<DCCReference Include="FMConst.pas"/>
 			<DCCReference Include="FMCommonImages.pas"/>
+			<DCCReference Include="FMStringGrid.pas"/>
 			<RcCompile Include="FMComboBox.rc">
 				<Form>uniComboBox.res</Form>
 			</RcCompile>
