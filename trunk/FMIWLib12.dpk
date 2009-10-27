@@ -1,0 +1,49 @@
+package FMIWLib12;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'FM SOFT IW Components'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vclimg,
+  vclx,
+  inet,
+  VclSmp,
+  vcldb,
+  dbrtl,
+  designide,
+  xmlrtl,
+  vclactnband,
+  Intraweb_100_120;
+
+contains
+  FMTabControl in 'FMTabControl.pas',
+  FMComboBox in 'FMComboBox.pas',
+  FMConst in 'FMConst.pas',
+  FMCommonImages in 'FMCommonImages.pas',
+  FMStringGrid in 'FMStringGrid.pas';
+
+end.
