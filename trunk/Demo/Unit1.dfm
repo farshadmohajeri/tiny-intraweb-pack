@@ -165,7 +165,7 @@ object IWForm2: TIWForm2
     UseFrame = False
     UseSize = False
     FriendlyName = 'IWFMStringGrid1'
-    ColumnCount = 4
+    ColumnCount = 5
     RowCount = 5
     ShowEmptyCells = True
     ShowInvisibleRows = True
@@ -173,7 +173,6 @@ object IWForm2: TIWForm2
     FixedColor = clBtnFace
     FixedCols = 1
     FixedRows = 1
-    ColCount = 4
     Color = clWindow
     DefaultColWidth = 64
     DefaultRowHeight = 16

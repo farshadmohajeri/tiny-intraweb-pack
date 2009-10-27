@@ -43,6 +43,7 @@ contains
   FMTabControl in 'FMTabControl.pas',
   FMComboBox in 'FMComboBox.pas',
   FMConst in 'FMConst.pas',
-  FMCommonImages in 'FMCommonImages.pas';
+  FMCommonImages in 'FMCommonImages.pas',
+  FMStringGrid in 'FMStringGrid.pas';
 
 end.
