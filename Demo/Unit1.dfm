@@ -1,13 +1,13 @@
 object IWForm2: TIWForm2
   Left = 0
   Top = 0
-  Width = 734
-  Height = 520
+  Width = 710
+  Height = 479
   RenderInvisibleControls = False
+  AllowPageAccess = True
   ConnectionMode = cmAny
   SupportedBrowsers = [brIE, brGecko, brOpera, brSafari]
   OnCreate = IWAppFormCreate
-  AllowPageAccess = True
   BGColor = clWebLIGHTSTEELBLUE
   BrowserSecurityCheck = True
   Background.Fixed = False
@@ -102,9 +102,9 @@ object IWForm2: TIWForm2
     FriendlyName = 'IWMemo1'
   end
   object IWButton1: TIWButton
-    Left = 16
-    Top = 239
-    Width = 75
+    Left = 311
+    Top = 14
+    Width = 41
     Height = 25
     Cursor = crAuto
     IW50Hint = False
@@ -119,7 +119,7 @@ object IWForm2: TIWForm2
     StyleRenderOptions.RenderVisibility = True
     StyleRenderOptions.RenderStatus = True
     StyleRenderOptions.RenderAbsolute = True
-    Caption = 'IWButton1'
+    Caption = 'Get'
     DoSubmitValidation = True
     Color = clBtnFace
     Font.Color = clNone
@@ -132,7 +132,7 @@ object IWForm2: TIWForm2
   end
   object IWFMStringGrid1: TIWFMStringGrid
     Left = 16
-    Top = 270
+    Top = 239
     Width = 289
     Height = 227
     Cursor = crAuto
@@ -181,9 +181,9 @@ object IWForm2: TIWForm2
     CellsClickable = True
   end
   object IWFMTabControl1: TIWFMTabControl
-    Left = 311
+    Left = 360
     Top = 16
-    Width = 400
+    Width = 338
     Height = 217
     Cursor = crAuto
     RenderInvisibleControls = False
@@ -208,12 +208,12 @@ object IWForm2: TIWForm2
     ClipRegion = False
     ZIndex = 1000
     DesignSize = (
-      400
+      338
       217)
     object IWFMTabControl1Page0: TIWTabPage
       Left = 0
       Top = 20
-      Width = 400
+      Width = 338
       Height = 197
       RenderInvisibleControls = False
       TabOrder = 0
@@ -264,7 +264,7 @@ object IWForm2: TIWForm2
     object IWFMTabControl1Page1: TIWTabPage
       Left = 0
       Top = 20
-      Width = 400
+      Width = 338
       Height = 197
       RenderInvisibleControls = False
       TabOrder = 1
@@ -315,7 +315,7 @@ object IWForm2: TIWForm2
     object IWFMTabControl1Page2: TIWTabPage
       Left = 0
       Top = 20
-      Width = 400
+      Width = 338
       Height = 197
       RenderInvisibleControls = False
       TabOrder = 2
