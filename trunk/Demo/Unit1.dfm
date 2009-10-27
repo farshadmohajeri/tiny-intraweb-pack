@@ -2,10 +2,11 @@ object IWForm2: TIWForm2
   Left = 0
   Top = 0
   Width = 734
-  Height = 375
+  Height = 520
   RenderInvisibleControls = False
   ConnectionMode = cmAny
   SupportedBrowsers = [brIE, brGecko, brOpera, brSafari]
+  OnCreate = IWAppFormCreate
   AllowPageAccess = True
   BGColor = clWebLIGHTSTEELBLUE
   BrowserSecurityCheck = True
@@ -72,7 +73,7 @@ object IWForm2: TIWForm2
     Left = 16
     Top = 43
     Width = 289
-    Height = 273
+    Height = 190
     Cursor = crAuto
     IW50Hint = False
     ParentShowHint = False
@@ -102,7 +103,7 @@ object IWForm2: TIWForm2
   end
   object IWButton1: TIWButton
     Left = 16
-    Top = 322
+    Top = 239
     Width = 75
     Height = 25
     Cursor = crAuto
@@ -129,11 +130,62 @@ object IWForm2: TIWForm2
     TabOrder = 2
     OnAsyncClick = IWButton1AsyncClick
   end
+  object IWFMStringGrid1: TIWFMStringGrid
+    Left = 16
+    Top = 270
+    Width = 289
+    Height = 227
+    Cursor = crAuto
+    IW50Hint = False
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 0
+    RenderSize = True
+    StyleRenderOptions.RenderSize = True
+    StyleRenderOptions.RenderPosition = True
+    StyleRenderOptions.RenderFont = True
+    StyleRenderOptions.RenderZIndex = True
+    StyleRenderOptions.RenderVisibility = True
+    StyleRenderOptions.RenderStatus = True
+    StyleRenderOptions.RenderAbsolute = True
+    BorderColors.Color = clNone
+    BorderColors.Light = clNone
+    BorderColors.Dark = clNone
+    BGColor = clWindow
+    BorderSize = 1
+    BorderStyle = tfDefault
+    Caption = 'IWFMStringGrid1'
+    CellPadding = 0
+    CellSpacing = 0
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FrameBuffer = 40
+    Lines = tlAll
+    UseFrame = False
+    UseSize = False
+    FriendlyName = 'IWFMStringGrid1'
+    ColumnCount = 4
+    RowCount = 5
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
+    ScrollToCurrentRow = False
+    FixedColor = clBtnFace
+    FixedCols = 1
+    FixedRows = 1
+    ColCount = 4
+    Color = clWindow
+    DefaultColWidth = 64
+    DefaultRowHeight = 16
+    OnSelectCell = IWFMStringGrid1SelectCell
+    Numbered = True
+    CellsClickable = True
+  end
   object IWFMTabControl1: TIWFMTabControl
     Left = 311
     Top = 16
     Width = 400
-    Height = 300
+    Height = 217
     Cursor = crAuto
     RenderInvisibleControls = False
     ActiveTabFont.Color = clWebBLACK
@@ -158,12 +210,12 @@ object IWForm2: TIWForm2
     ZIndex = 1000
     DesignSize = (
       400
-      300)
+      217)
     object IWFMTabControl1Page0: TIWTabPage
       Left = 0
       Top = 20
       Width = 400
-      Height = 280
+      Height = 197
       RenderInvisibleControls = False
       TabOrder = 0
       Title = 'Page0'
@@ -214,7 +266,7 @@ object IWForm2: TIWForm2
       Left = 0
       Top = 20
       Width = 400
-      Height = 280
+      Height = 197
       RenderInvisibleControls = False
       TabOrder = 1
       Title = 'Page1'
@@ -265,7 +317,7 @@ object IWForm2: TIWForm2
       Left = 0
       Top = 20
       Width = 400
-      Height = 280
+      Height = 197
       RenderInvisibleControls = False
       TabOrder = 2
       Title = 'Page2'

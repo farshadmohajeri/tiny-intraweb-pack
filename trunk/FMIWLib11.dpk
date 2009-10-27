@@ -38,12 +38,18 @@ requires
   xmlrtl,
   vclactnband,
   vcljpg,
-  Intraweb_90_100;
+  Intraweb_90_100,
+  uniGUI11,
+  ExtPascal11,
+  IndyProtocols110,
+  IndyCore110,
+  IndySystem110;
 
 contains
   FMTabControl in 'FMTabControl.pas',
   FMComboBox in 'FMComboBox.pas',
   FMConst in 'FMConst.pas',
-  FMCommonImages in 'FMCommonImages.pas';
+  FMCommonImages in 'FMCommonImages.pas',
+  FMStringGrid in 'FMStringGrid.pas';
 
 end.
