@@ -12,7 +12,7 @@ original author are preserved and explicitly stated.
 
 -These Components are free to use for personal or commercial purpose as long as
 they are not included or distributed as a part of another development tool library.
-Contact the author if you want to distribute them as a part of another IW related library.
+Please contact the author if you want to distribute them as a part of another IW related library.
 
 Developed by:
 Farshad Mohajeri
@@ -42,7 +42,6 @@ type
     procedure SetColors;
     procedure SetCellSizes(sRow:Integer=0; sCol:Integer=0);
   protected
-    procedure SetExtraProperties;
     function GetColCount:Integer;
     procedure SetColCount(Value:Integer);
     function GetRowCount:Integer;
@@ -93,7 +92,6 @@ implementation
 
 uses
   IWGridCommon;
-
 
 constructor TIWFMStringGrid.Create(AOwner:TComponent);
 begin
@@ -307,11 +305,6 @@ begin
   pCol:=ColumnCount;
   inherited ColumnCount:=Value;
   SetCellSizes(0, pCol);
-end;
-
-procedure TIWFMStringGrid.SetExtraProperties;
-begin
-  ;
 end;
 
 procedure Register;

@@ -12,7 +12,7 @@ original author are preserved and explicitly stated.
 
 -These Components are free to use for personal or commercial purpose as long as
 they are not included or distributed as a part of another development tool library.
-Contact the author if you want to distribute them as a part of another IW related library.
+Please contact the author if you want to distribute them as a part of another IW related library.
 
 Developed by:
 Farshad Mohajeri
@@ -57,7 +57,6 @@ type
   protected
     function GetStyle:TComboBoxStyle;
     procedure SetStyle(Value: TComboBoxStyle);
-    procedure SetExtraProperties;
     function GetText:TCaption; reintroduce;
     procedure SetText(Value: TCaption); reintroduce;
     function GetItemIndex: Integer;
@@ -118,10 +117,6 @@ end;
 procedure TIWFMComboBox.SetStyle(Value: TComboBoxStyle);
 begin
   FStyle:=Value;
-end;
-
-procedure TIWFMComboBox.SetExtraProperties;
-begin
 end;
 
 function TIWFMComboBox.GetText: TCaption;
