@@ -1,0 +1,13 @@
+Steps required to install package:
+
+1 - Unpack the rar package to a folder.
+
+2 - Open the corresponding FMIWLibXX.dpk package in Delphi. 
+  
+  Delphi2007 XX = 11 
+  Delphi2009 XX = 12 
+  Delphi2010 XX = 14 
+
+3 - Compile and install the package. 
+
+4 - Add the folder path to Delphi Tool-> Options-> Delphi Options-> Library - Win32-> Library Path 
