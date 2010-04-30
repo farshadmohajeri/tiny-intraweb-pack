@@ -11,7 +11,7 @@ TIWFMComboBox is an editable ComboBox.
 
 Components are tested on Delphi versions 2007 and later but provided package is for D2007 only. You can port exisiting package to other Delphi versions with no problem.
 
-IW verions prior to 9.0.42 is not tested.
+IW verions prior to 9.0.42 are not tested.
 
 Known problems:
 TIWFMTabControl IDE designers doesn't work as intended. It must be a problem with IW default designer which doesn't work correctly with TIWTabControl descendants. 
