@@ -67,6 +67,8 @@ type
     function GetColor:TColor;
     procedure SetColor(Value:TColor);
     procedure SetMaxLength(Value: Integer);
+    function GetVisible: Boolean;
+    procedure SetVisible(Value: Boolean);
   public
     constructor Create(AOwner:TComponent); override;
     destructor Destroy; override;
@@ -81,6 +83,7 @@ type
     property ItemIndex: Integer read GetItemIndex write SetItemIndex;
     property Color:TColor read GetColor write SetColor;
     property MaxLength: Integer read FMaxLength write SetMaxLength;
+    property Visible: Boolean read GetVisible write SetVisible;
   end;
 
 procedure Register;
@@ -107,6 +110,18 @@ destructor TIWFMComboBox.Destroy;
 begin
   if Owner=nil then FEmbeddedEditor.Free;
   inherited Destroy;
+end;
+
+function TIWFMComboBox.GetVisible: Boolean;
+begin
+  Result:=inherited Visible;
+end;
+
+procedure TIWFMComboBox.SetVisible(Value: Boolean);
+begin
+  inherited Visible:=Value;
+  if Assigned(FEmbeddedEditor) then
+    FEmbeddedEditor.Visible:=Value;
 end;
 
 function TIWFMComboBox.GetStyle:TComboBoxStyle;
@@ -265,7 +280,7 @@ begin
                       'height:'+IntToStr(Height-7)+'px;')+
                       'border: none;'+
                       'background-color:' + ColorToRGBString(FOwnerCombo.Color) + ';'+
-                      'visibility:'+iif(FOwnerCombo.Style=csDropDown, 'visible;', 'hidden;')+
+                      'visibility:'+iif((FOwnerCombo.Style=csDropDown) and Visible, 'visible;', 'hidden;')+
                       FOwnerCombo.Font.FontToStringStyle(AContext.Browser) );
 
       AddStringParam('value', TextToHTML(Text));
@@ -294,7 +309,7 @@ begin
                       iif(AContext.WebApplication.Browser in [brNetscape6, brGecko],
                       IntToStr(Height-5)+'px;', IntToStr(Height-7)+'px;'));
     AddAsyncStyle(Result, 'background-color:' + ColorToRGBString(FOwnerCombo.Color) + ';');
-    AddAsyncStyle(Result, 'visibility:'+iif(FOwnerCombo.Style=csDropDown, 'visible;', 'hidden;'));
+    AddAsyncStyle(Result, 'visibility:'+iif((FOwnerCombo.Style=csDropDown) and Visible, 'visible;', 'hidden;'));
     AddAsyncStyle(Result, FOwnerCombo.Font.FontToStringStyle(AContext.Browser));
     RenderAsyncPropertyAsString('MaxLength', Result, IntToStr(FOwnerCombo.MaxLength), true);
     RenderAsyncPropertyAsString('Text', Result, Text, false);

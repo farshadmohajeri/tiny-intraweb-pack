@@ -25,6 +25,7 @@ object IWForm2: TIWForm2
     Width = 289
     Height = 21
     Cursor = crAuto
+    Visible = True
     IW50Hint = False
     ParentShowHint = False
     ShowHint = True
@@ -102,8 +103,8 @@ object IWForm2: TIWForm2
     FriendlyName = 'IWMemo1'
   end
   object IWButton1: TIWButton
-    Left = 311
-    Top = 14
+    Left = 313
+    Top = 12
     Width = 41
     Height = 25
     Cursor = crAuto
