@@ -69,6 +69,7 @@ type
     procedure SetMaxLength(Value: Integer);
     function GetVisible: Boolean;
     procedure SetVisible(Value: Boolean);
+    procedure SetEnabled(Value: Boolean); override;
   public
     constructor Create(AOwner:TComponent); override;
     destructor Destroy; override;
@@ -110,6 +111,13 @@ destructor TIWFMComboBox.Destroy;
 begin
   if Owner=nil then FEmbeddedEditor.Free;
   inherited Destroy;
+end;
+
+procedure TIWFMComboBox.SetEnabled(Value: Boolean);
+begin
+  inherited SetEnabled(Value);
+  if Assigned(FEmbeddedEditor) then
+    FEmbeddedEditor.Enabled:=Value;
 end;
 
 function TIWFMComboBox.GetVisible: Boolean;
@@ -271,6 +279,8 @@ begin
     begin
       AddStringParam('name', HTMLName);
       AddStringParam('id', HTMLName);
+      if not Enabled then
+        AddStringParam('readonly', 'readonly');
       AddStringParam('style', 'position:absolute;'+
                       'left:'+IntToStr(Left+2)+'px;'+
                       'top:'+IntToStr(Top+2)+'px;'+
